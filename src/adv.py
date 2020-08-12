@@ -33,7 +33,7 @@ narrow.n_to = treasure
 treasure.s_to = narrow
 
 #
-# Main
+# Main1
 #
 
 # Make a new player object that is currently in the 'outside' room.
