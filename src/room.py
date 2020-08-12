@@ -5,9 +5,6 @@ class Room:
     def __init__(self, name, description):
         self.name = name
         self.description = description
-        self.s_to = None
-        self.n_to = None
-        self.w_to = None
-        self.e_to = None
+
     def __str__(self):
-        output = f'{self.name}: {self.description}'
+        return  f'{self.name}: {self.description}'
