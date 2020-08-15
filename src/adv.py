@@ -52,19 +52,27 @@ while True:
     # * Prints the current room name
     current = player.current_room
     print(f'{player.current_room}\n')
-    print(f'The room has the following items\n')
+    print(f'The room has the following items:\n')
     for item in current.items:
         print(f'{item}\n')
 
     # * Prints the current description (the textwrap module might be useful here). strip, removes whitespace, lower allows upper and lower,[0] so its not a list
     user_input = input(
-        'Please input a direction to go.\n For north use `n`, For south use `s`, for east `e` and for west use `w` to quit hit `q` '
+        'Please input a direction to go.\n'
+        '\nFor north use `n`, For south use `s`, for east `e` and for west use `w` to quit hit `q` '
         'or get or drop an item Hit i for player inventory\n')
     # just using for char
     if user_input == 'q':
         break
     if user_input.lower() == 'i':
-        print(player.items)
+        if not player.items:
+            print('You have no items\n')
+        else:
+            for item in player.items:
+                print(f'{item}\n')
+                #for prints out the item not the whole list
+
+
     split_input = user_input.split()
 
     # for items
